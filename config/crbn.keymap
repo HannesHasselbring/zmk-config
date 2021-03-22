@@ -52,7 +52,7 @@
 			bindings = <
 				&reset &bootloader &bt BT_CLR &bt BT_PRV &bt BT_NXT &trans &trans &trans &kp UP &trans &bt BT_SEL 1 &bt BT_SEL 0
 				&trans &kp LC(LA(LG(LEFT))) &kp LC(LA(LG(RIGHT))) &kp LC(LA(LG(M))) &trans &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans
-				&kp LS(LC(LG(4))) &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+				&kp LS(LC(LG(N4))) &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &kp C_BRI_DN &kp C_BRI_UP &kp K_MUTE
 			>;
 		};
