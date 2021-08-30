@@ -2,7 +2,7 @@ on:
   push:
     path:
       - reviung41*
-  pull_requst:
+  pull_request:
     path:
       - reviung41*
   workflow_dispatch:

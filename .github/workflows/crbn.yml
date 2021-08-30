@@ -2,7 +2,7 @@ on:
   push:
     path:
       - crbn*
-  pull_requst:
+  pull_request:
     path:
       - crbn*
   workflow_dispatch:
