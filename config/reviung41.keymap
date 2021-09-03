@@ -11,20 +11,31 @@
 #define PSHOT LS(LA(LG(N4)))
 
 / {
+        behaviors {
+                hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "homerow mods";
+                #binding-cells = <2>;
+                tapping_term_ms = <200>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+                };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
 // -------------------------------------------------------------------------------------
-// |  TAB     |  Q  |  W  |  E  |  R       |  T  |     |  Y  |  U       |  I  |  O  |  P  |   BKSP    |
-// | CTRL(ESC)|  A  |  S  |  D  |  SHFT(F) |  G  |     |  H  |  SHFT(J) |  K  |  L  |  ;  |    '      |
-// | SHFT     |  Z  |  X  |  C  |  V       |  B  |     |  N  |  M       |  ,  |  .  |  /  | SHFT(RET) |
-//                                   | ALT | LWR | SPC | RSE  | ALT |
+// |  TAB     |    Q    |    W   |    E   |    R    |  T  |     |  Y  |    U     |   I   |    O    |    P     |   BKSP    |
+// | CTRL(ESC)| CTRL(A) | ALT(S) | GUI(D) | SHFT(F) |  G  |     |  H  | SHFT(J) | GUI(K) |  ALT(L) |  SHFT(;) |    '      |
+// | SHFT     |    Z    |    X   |    C   |    V    |  B  |     |  N  |    M    |    ,   |    .    |    /     | SHFT(RET) |
+//                              | ALT | LWR(RET) | SPC | RSE(SPC)  | ALT |
                         bindings = <
-   &kp TAB       &kp Q &kp W &kp E &kp R       &kp T            &kp Y &kp U        &kp I     &kp O   &kp P    &kp BSPC
-   &mt LCTRL ESC &kp A &kp S &kp D &mt LSHFT F &kp G            &kp H &mt RSHFT J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT     &kp Z &kp X &kp C &kp V       &kp B            &kp N &kp M        &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
-                                &kp LGUI  &mo 1      &kp SPACE  &mo 2  &kp LALT
+   &kp TAB       &kp Q       &kp W      &kp E      &kp R       &kp T            &kp Y &kp U        &kp I       &kp O       &kp P          &kp BSPC
+   &mt LCTRL ESC &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G            &kp H &hm RSHFT J  &hm RGUI K  &hm RALT L  &hm RSHFT SEMI &kp SQT
+   &kp LSHFT     &kp Z       &kp X      &kp C      &kp V       &kp B            &kp N &kp M        &kp COMMA   &kp DOT     &kp FSLH       &mt RSHFT RET
+                                            &mt LGUI TAB  &lt 1 RET  &kp SPACE  &lt 2 SPACE  &mt LALT BSPC
                         >;
                 };
 
