@@ -29,7 +29,7 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <1 2>;
+            key-positions = <2 3>;
             bindings = <&kp ESC>;
         };
 
@@ -83,6 +83,12 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
         };
+        scrn_shot_macro: scrn_shot_macro {
+            compatible = "zmk,behavior-macro";
+            label = "SCRN_SHOT_MACRO";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(LS(NUMBER_4)))>;
+        };
     };
 
     keymap {
@@ -113,7 +119,7 @@
             bindings = <
 &trans   &kp EXCL    &kp AT  &kp HASH    &kp DLLR  &kp PRCNT           &kp CARET  &kp AMPS  &kp ASTRK   &kp LPAR   &kp RPAR          &kp DEL
 &trans  &kp UNDER  &kp PLUS  &kp LBRC    &kp RBRC   &kp PIPE            &kp LEFT  &kp DOWN     &kp UP  &kp RIGHT  &kp GRAVE        &kp TILDE
-&trans    &kp ESC  &kp LGUI  &kp LALT  &caps_word    &kp DQT            &kp HOME   &kp END  &kp PG_UP  &kp PG_DN  &kp PSCRN  &mt RSHFT SPACE
+&trans    &kp ESC  &kp LGUI  &kp LALT  &caps_word    &kp DQT             &kp TAB  &kp HOME    &kp END  &kp PG_UP  &kp PSCRN  &mt RSHFT SPACE
                                &trans      &trans             &kp RET                &mo 3     &trans
             >;
         };
@@ -141,10 +147,10 @@
             //                                              |     |     |     |     |     |
 
             bindings = <
-&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF   &none  &rgb_ug RGB_TOG          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR   &none            &none                 &none         &none         &none         &none         &none       &none
-          &none            &none            &none            &none   &none            &none            &sys_reset         &none         &none         &none         &none       &none
-                                                            &trans  &trans                   &tog 3                      &trans        &trans
+&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF   &none   &rgb_ug RGB_TOG          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &bt BT_CLR
+&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR   &none             &none                 &none         &none         &none         &none         &none        &none
+          &none            &none            &none            &none   &none  &scrn_shot_macro            &sys_reset         &none         &none         &none         &none  &bootloader
+                                                            &trans  &trans                    &tog 3                      &trans        &trans
             >;
         };
     };
