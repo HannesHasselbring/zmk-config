@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
+ * Copyright (c) 2023 Hannes Hasselbring
  *
  * SPDX-License-Identifier: MIT
  */
@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
 
 / {
     behaviors {
@@ -95,12 +94,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // -------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  F  |  P  |  G  |   |  J  |  L   |  U  |  Y  |  ;  |   BKSP    |
-            // | CTRL |  A  |  R  |  S  |  T  |  D  |   |  H  |  N   |  E  |  I  |  O  |    '      |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,  |  .  |  /  | SHFT(RET) |
-            //                         | ALT | LWR | SPC | RSE  | ALT |
-
             bindings = <
   &kp TAB        &kp Q       &kp W         &kp F        &kp P  &kp G             &kp J        &kp L         &kp U       &kp Y     &kp SEMI       &kp BSPC
 &kp LCTRL  &hm LCTRL A  &hm LALT R    &hm LGUI S  &hm LSHFT T  &kp D             &kp H  &hm RSHFT N    &hm RGUI E  &hm RALT I  &hm RCTRL O        &kp SQT
@@ -110,47 +103,29 @@
         };
 
         lower_layer {
-            // ------------------------------------------------------------------------------------
-            // |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      DEL    |
-            // |    |  _  |  +  |  {  |  }  | "|" |   | LFT | DWN |  UP | RGT |  `  |       ~     |
-            // |    | ESC | GUI | ALT | CAPS|  "  |   | HOME| END | PGUP| PGDN| PRSC| SHFT(SPACE) |
-            //                       |     |     | RET | ADJ |     |
-
             bindings = <
-&trans   &kp EXCL    &kp AT  &kp HASH    &kp DLLR  &kp PRCNT           &kp CARET  &kp AMPS  &kp ASTRK   &kp LPAR   &kp RPAR          &kp DEL
-&trans  &kp UNDER  &kp PLUS  &kp LBRC    &kp RBRC   &kp PIPE            &kp LEFT  &kp DOWN     &kp UP  &kp RIGHT  &kp GRAVE        &kp TILDE
-&trans    &kp ESC  &kp LGUI  &kp LALT  &caps_word    &kp DQT             &kp TAB  &kp HOME    &kp END  &kp PG_UP  &kp PSCRN  &mt RSHFT SPACE
-                               &trans      &trans             &kp RET                &mo 3     &trans
+&trans   &kp EXCL    &kp AT  &kp HASH    &kp DLLR  &kp PRCNT           &kp CARET  &kp AMPS    &kp ASTRK       &kp LPAR   &kp RPAR  &trans
+&trans  &kp UNDER  &kp PLUS  &kp LBRC    &kp RBRC   &kp PIPE            &kp LEFT  &kp DOWN       &kp UP      &kp RIGHT   &kp SEMI  &trans
+&trans    &kp ESC  &kp LGUI  &kp LALT  &caps_word    &kp DQT            &kp HOME   &kp END  &kp PAGE_UP  &kp PAGE_DOWN  &kp PSCRN  &trans
+                               &trans      &trans             &kp RET                &mo 3       &trans
             >;
         };
 
         raise_layer {
-            // ----------------------------------------------------------------------------
-            // |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL |
-            // |    |  -  |  =  |  [  |  ]  |  \  |   | F1  | F2  | F3  | F4  | F5  | F6  |
-            // |    | ESC | GUI | ALT | CAPS|  "  |   | F7  | F8  | F9  | F10 | F11 | F12 |
-            //                       |     | ADJ | BKSP |    |     |
-
             bindings = <
-&trans     &kp N1     &kp N2    &kp N3    &kp N4    &kp N5            &kp N6  &kp N7  &kp N8   &kp N9   &kp N0  &kp DEL
-&trans  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH            &kp F1  &kp F2  &kp F3   &kp F4   &kp F5   &kp F6
-&trans    &kp ESC   &kp LGUI  &kp RALT  &kp CLCK   &kp DQT            &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-                                &trans     &mo 3            &kp BSPC          &trans  &trans
+&trans     &kp N1     &kp N2    &kp N3    &kp N4    &kp N5                   &kp N6  &kp N7     &kp N8     &kp N9     &kp N0  &trans
+&trans  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH            &kp LG(GRAVE)  &trans  &kp GRAVE  &kp TILDE  &kp COLON  &trans
+&trans    &kp ESC   &kp LGUI  &kp RALT  &kp CLCK   &kp DQT                  &kp TAB  &trans     &trans     &trans     &trans  &trans
+                                &trans     &mo 3            &kp BSPC                 &trans     &trans
             >;
         };
 
         adjust_layer {
-            // -----------------------------------------------------------------------------------------
-            // | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
-            // | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |    |         |   |       |     |     |     |     |        |
-            // |          |          |          |          |    |         |   | RESET |     |     |     |     |        |
-            //                                              |     |     |     |     |     |
-
             bindings = <
-&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF   &none   &rgb_ug RGB_TOG          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &bt BT_CLR
-&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR   &none             &none                 &none         &none         &none         &none         &none        &none
-          &none            &none            &none            &none   &none  &scrn_shot_macro            &sys_reset         &none         &none         &none         &none  &bootloader
-                                                            &trans  &trans                    &tog 3                      &trans        &trans
+&trans   &kp F1   &kp F2  &kp F3  &kp F4            &kp F5          &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &bt BT_CLR
+&trans   &kp F6   &kp F7  &kp F8  &kp F9           &kp F10                 &none          &none         &none         &none         &none        &none
+&trans  &kp F12  &kp F11   &none   &none  &scrn_shot_macro           &kp LG(TAB)  &kp LG(GRAVE)         &none         &none    &sys_reset  &bootloader
+                          &trans  &trans                    &tog 3                       &trans        &trans
             >;
         };
     };
