@@ -1,0 +1,5 @@
+if SHIELD_34KEYS_HANDWIRED
+config ZMK_KEYBOARD_NAME
+    default "34Keys Handwired"
+
+endif

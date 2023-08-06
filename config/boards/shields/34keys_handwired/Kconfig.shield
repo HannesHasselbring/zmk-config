@@ -1,0 +1,5 @@
+# Copyright (c) 2023 Hannes Hasselbring
+# SPDX-License-Identifier: MIT
+
+config SHIELD_34KEYS_HANDWIRED
+    def_bool $(shields_list_contains,34keys_handwired)
