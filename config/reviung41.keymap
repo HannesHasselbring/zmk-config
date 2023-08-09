@@ -8,7 +8,14 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define LEFT_R1 &kp Q       &kp W         &kp F        &kp P  &kp G
+#define DEFAULT_LEFT_R1     &kp Q       &kp W       &kp F       &kp P       &kp G
+#define DEFAULT_RIGHT_R1    &kp J       &kp L       &kp U       &kp Y       &kp SEMI
+#define DEFAULT_LEFT_R2     &hm LCTRL A &hm LALT R  &hm LGUI S  &hm LSHFT T &kp D
+#define DEFAULT_RIGHT_R2    &kp H       &hm RSHFT N &hm RGUI E  &hm RALT I  &hm RCTRL O
+#define DEFAULT_LEFT_R3     &kp Z       &kp X       &kp C       &kp V       &kp B
+#define DEFAULT_RIGHT_R3    &kp K       &kp M       &kp COMMA   &kp DOT     &kp FSLH
+#define DEFAULT_LEFT_THUMB  &mt RGUI SQT    &lt 1 RET
+#define DEFAULT_RIGHT_THUMB &lt 2 SPACE  &mt RALT TAB
 
 / {
     behaviors {
@@ -97,10 +104,10 @@
 
         default_layer {
             bindings = <
-  &kp TAB        LEFT_R1             &kp J        &kp L         &kp U       &kp Y     &kp SEMI       &kp BSPC
-&kp LCTRL  &hm LCTRL A  &hm LALT R    &hm LGUI S  &hm LSHFT T  &kp D             &kp H  &hm RSHFT N    &hm RGUI E  &hm RALT I  &hm RCTRL O        &kp SQT
-&kp LSHFT        &kp Z       &kp X         &kp C        &kp V  &kp B             &kp K        &kp M     &kp COMMA     &kp DOT     &kp FSLH  &mt RSHFT RET
-                                    &mt RGUI SQT    &lt 1 RET         &kp SPACE         &lt 2 SPACE  &mt RALT TAB
+&kp TAB    DEFAULT_LEFT_R1             DEFAULT_RIGHT_R1     &kp BSPC
+&kp LCTRL  DEFAULT_LEFT_R2             DEFAULT_RIGHT_R2     &kp SQT
+&kp LSHFT  DEFAULT_LEFT_R3             DEFAULT_RIGHT_R3     &mt RSHFT RET
+         DEFAULT_LEFT_THUMB &kp SPACE  DEFAULT_RIGHT_THUMB
             >;
         };
 
