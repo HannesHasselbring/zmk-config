@@ -46,17 +46,17 @@
         };
 
         bracket_combo {
-            bindings = <&bracket_macro>;
+            bindings = <&macro_bracket>;
             key-positions = <5 6>;
         };
 
         par_macro {
-            bindings = <&par_macro>;
+            bindings = <&macro_parentheses>;
             key-positions = <17 18>;
         };
 
         brace_combo {
-            bindings = <&brace_macro>;
+            bindings = <&macro_brace>;
             key-positions = <29 30>;
         };
 
@@ -67,30 +67,7 @@
     };
 
     macros {
-        bracket_macro: bracket_macro {
-            compatible = "zmk,behavior-macro";
-            label = "BRACKET_MACRO";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT &kp RIGHT_BRACKET &kp LEFT_ARROW>;
-        };
-        brace_macro: brace_macro {
-            compatible = "zmk,behavior-macro";
-            label = "BRACE_MACRO";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_ARROW>;
-        };
-        par_macro: par_macro {
-            compatible = "zmk,behavior-macro";
-            label = "PAR_MACRO";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
-        };
-        scrn_shot_macro: scrn_shot_macro {
-            compatible = "zmk,behavior-macro";
-            label = "SCRN_SHOT_MACRO";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LC(LS(NUMBER_4)))>;
-        };
+        #include "defaults/macros.dtsi"
     };
 
     keymap {

@@ -35,7 +35,7 @@
 #define ADJUST_RIGHT_R1     &bt BT_SEL 0    &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4 
 #define ADJUST_LEFT_R2      &kp F6          &kp F7      &kp F8          &kp F9          &kp F10
 #define ADJUST_RIGHT_R2     &none           &none       &none           &none           &none
-#define ADJUST_LEFT_R3      &kp F12         &kp F11     &none           &none           &scrn_shot_macro 
+#define ADJUST_LEFT_R3      &kp F12         &kp F11     &none           &none           &macro_screenshot 
 #define ADJUST_RIGHT_R3     &kp LG(TAB)     &kp LG(GRAVE) &none         &none           &sys_reset
 #define ADJUST_LEFT_THUMB   &trans  &trans
 #define ADJUST_RIGHT_THUMB  &trans  &trans
