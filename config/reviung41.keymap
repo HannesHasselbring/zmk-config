@@ -11,12 +11,9 @@
 #include "defaults/layout.h"
 #include "defaults/keypos/reviung41.h"
 
+#include "defaults/behaviors.dtsi"
 
 / {
-    behaviors {
-        #include "defaults/behaviors.dtsi"
-    };
-
     combos {
        #include "defaults/combos.dtsi"
     };
