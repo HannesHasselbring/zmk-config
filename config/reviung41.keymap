@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 #include "defaults/layout.h"
-#include "default/keypos/reviung41.h"
+#include "defaults/keypos/reviung41.h"
 
 
 / {
