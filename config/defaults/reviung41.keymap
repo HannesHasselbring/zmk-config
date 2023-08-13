@@ -8,18 +8,18 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#include "defaults/layout.h"
-#include "defaults/keypos/reviung41.h"
+#include "layout.h"
+#include "keypos/reviung41.h"
 
-#include "defaults/behaviors.dtsi"
+#include "behaviors.dtsi"
 
 / {
     combos {
-       #include "defaults/combos.dtsi"
+       #include "combos.dtsi"
     };
 
     macros {
-        #include "defaults/macros.dtsi"
+        #include "macros.dtsi"
     };
 
     keymap {
