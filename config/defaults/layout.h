@@ -27,7 +27,7 @@
 #define RAISE_LEFT_R2       &kp MINUS       &kp EQUAL   &kp LBKT    &kp RBKT    &kp BSLH 
 #define RAISE_RIGHT_R2      &kp LG(GRAVE)   &trans      &kp GRAVE   &kp TILDE   &kp COLON 
 #define RAISE_LEFT_R3       &kp ESC         &kp LCTRL   &kp RALT    &kp LGUI    &kp DQ
-#define RAISE_RIGHT_R3      &kp TAB         &trans      &kp RCTRL   &kp RALT    &kp ENTER
+#define RAISE_RIGHT_R3      &kp TAB         &trans      &kp RCTRL   &kp RALT    &kp RET
 #define RAISE_LEFT_THUMB    &trans  &mo 3 
 #define RAISE_RIGHT_THUMB   &trans  &trans
 
