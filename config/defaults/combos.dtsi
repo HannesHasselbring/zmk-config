@@ -9,7 +9,7 @@ compatible = "zmk,combos";
 
 COMBO(esc, &kp ESC, LT2 LT3)
 COMBO(ent, &kp ENTER, RB2 RB3)
-COMBO(bspc, &kp BSPC, RB2 RB3)
+COMBO(bspc, &kp BSPC, RT2 RT3)
 COMBO(bracket, &macro_bracket, LT0 RT0)
 COMBO(parentheses, &macro_parentheses, LM0 RM0)
 COMBO(brace, &macro_brace, RB0 LB0)
