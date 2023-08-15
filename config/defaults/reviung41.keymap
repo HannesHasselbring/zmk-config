@@ -38,7 +38,7 @@
             bindings = <
 &trans  LOWER_LEFT_R1           LOWER_RIGHT_R1  &trans
 &trans  LOWER_LEFT_R2           LOWER_RIGHT_R2  &trans
-&trans  LOWER_LEFT_R2           LOWER_RIGHT_R3  &trans
+&trans  LOWER_LEFT_R3           LOWER_RIGHT_R3  &trans
     LOWER_LEFT_THUMB  &kp RET   LOWER_RIGHT_THUMB
             >;
         };
@@ -46,8 +46,8 @@
         raise_layer {
             bindings = <
 &trans  RAISE_LEFT_R1            RAISE_RIGHT_R1  &trans
-&trans  RAISE_LEFT_R1            RAISE_RIGHT_R2  &trans
-&trans  RAISE_LEFT_R1            RAISE_RIGHT_R3  &trans
+&trans  RAISE_LEFT_R2            RAISE_RIGHT_R2  &trans
+&trans  RAISE_LEFT_R3            RAISE_RIGHT_R3  &trans
    RAISE_LEFT_THUMB    &none     RAISE_RIGHT_THUMB
             >;
         };
