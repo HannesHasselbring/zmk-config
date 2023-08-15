@@ -1,0 +1,310 @@
+draw_config:
+  # # key dimensions, non-ortho layouts use key_h for width as well
+  # # key_w: 100 # This doesn't seem to do anything? 🤔
+  # key_h: 80
+
+  # # keys border radius
+  # key_rx: 4
+  # key_ry: 4
+
+  # # key labels line spacing for multi-line labels
+  # line_spacing: 1
+
+  # # combo box dimensions
+  # combo_w: 32
+  # combo_h: 32
+
+  # # padding from the edge of cap to top and bottom legends
+  # small_pad: 0
+
+  # # Padding between keys
+  # inner_pad_w: 1.5
+  # inner_pad_h: 1.5
+
+  # # padding between layers
+  # outer_pad_w: 0
+  # outer_pad_h: 0
+
+  # # gap between two halves for ortho layout generator
+  # # split_gap: 20 # This doesn't seem to have any effect either? 🤔
+
+  # # as it reads on the tin can, this comment is here for consistency
+  # append_colon_to_layer_header: false
+
+  # # shrink font size for legends wider than this many chars, set to 0 to disable
+  # # ideal value depends on the font size defined in svg_style and width of the boxes
+  # shrink_wide_legends: 5
+
+  # Glyphs dimensions
+  glyph_tap_size: 20
+  glyph_hold_size: 16
+  glyph_shifted_size: 16
+
+
+parse_config:
+  mark_alternate_layer_activators: true
+  trans_legend:
+    tap: $$mdi:transfer$$
+    type: trans
+
+  raw_binding_map:
+    "&macro_screenshot": "$$tabler:screenshot$$"
+    # Modifiers
+    "&caps_word": $$mdi:alpha-w-box$$
+
+    # macros
+    "&macro_parentheses": "$$mdi:code-parentheses$$"
+    "&macro_brace": "$$mdi:code-braces$$"
+    "&macro_bracket": "$$mdi:code-brackets$$"
+
+    # Empty
+    "&none":
+      tap: $$mdi:minus-circle-outline$$
+      type: none
+
+    # Reset
+    "&sys_reset":
+      tap: $$mdi:backup-restore$$
+    "&bootloader":
+      type: bootloader
+      tap: $$mdi:progress-download$$
+
+  # ZMK
+  zmk_keycode_map:
+    EXCLAMATION: "!"
+    EXCL: "!"
+    AT_SIGN: "@"
+    AT: "@"
+    HASH: "#"
+    POUND: "#"
+    DOLLAR: $
+    DLLR: $
+    PERCENT: "%"
+    PRCNT: "%"
+    CARET: ^
+    AMPERSAND: "&"
+    AMPS: "&"
+    ASTERISK: "*"
+    ASTRK: "*"
+    STAR: "*"
+    LEFT_PARENTHESIS: (
+    LPAR: (
+    RIGHT_PARENTHESIS: )
+    RPAR: )
+    EQUAL:
+      tap: "="
+      shifted: "+"
+    PLUS: +
+    MINUS:
+      tap: "-"
+      shifted: "_"
+    UNDERSCORE: _
+    UNDER: _
+    SLASH:
+      tap: "/"
+      shifted: "?"
+    FSLH:
+      tap: "/"
+      shifted: "?"
+    QUESTION: "?"
+    QMARK: "?"
+    BACKSLASH:
+      tap: '\'
+      shifted: "|"
+    BSLH:
+      tap: '\'
+      shifted: "|"
+    PIPE: "|"
+    NON_US_BACKSLASH: \
+    PIPE2: "|"
+    NON_US_BSLH: "|"
+    SEMICOLON:
+      tap: ";"
+      shifted: ":"
+    SEMI:
+      tap: ";"
+      shifted: ":"
+    COLON: ":"
+    SINGLE_QUOTE:
+      tap: "'"
+      shifted: '"'
+    SQT:
+      tap: "'"
+      shifted: '"'
+    APOSTROPHE: <
+    APOS: .
+    DOUBLE_QUOTES: '"'
+    DQT: '"'
+
+    LESS_THAN: <
+    LT: <
+    DOT:
+      tap: "."
+      shifted: ">"
+    COMMA:
+      tap: ","
+      shifted: "<"
+    GREATER_THAN: ">"
+    GT: ">"
+    LEFT_BRACKET:
+      tap: "["
+      shifted: "{"
+    LBKT:
+      tap: "["
+      shifted: "{"
+    LEFT_BRACE: "{"
+    LBRC: "{"
+    RIGHT_BRACKET:
+      tap: "]"
+      shifted: "}"
+    RBKT:
+      tap: "]"
+      shifted: "}"
+    RIGHT_BRACE: "}"
+    RBRC: "}"
+    GRAVE:
+      tap: "`"
+      shifted: "~"
+    TILDE: "~"
+    NON_US_HASH: "#"
+    NUHS: "#"
+    TILDE2: "~"
+
+    # Numbers
+    N1:
+      tap: 1
+      shifted: "!"
+    N2:
+      tap: 2
+      shifted: "@"
+    N3:
+      tap: 3
+      shifted: "#"
+    N4:
+      tap: 4
+      shifted: "$"
+    N5:
+      tap: 5
+      shifted: "%"
+    N6:
+      tap: 6
+      shifted: "^"
+    N7:
+      tap: 7
+      shifted: "&"
+    N8:
+      tap: 8
+      shifted: "*"
+    N9:
+      tap: 9
+      shifted: "("
+    N0:
+      tap: 0
+      shifted: ")"
+
+
+    # Modifiers
+    LCTRL: $$mdi:apple-keyboard-control$$
+    LALT: $$mdi:apple-keyboard-option$$
+    LSHIFT: $$mdi:apple-keyboard-shift$$
+    LSHFT: $$mdi:apple-keyboard-shift$$
+    LCMD: $$mdi:apple-keyboard-command$$
+    LGUI: $$mdi:apple-keyboard-command$$
+    RCTRL: $$mdi:apple-keyboard-control$$
+    RALT: $$mdi:apple-keyboard-option$$
+    RSHIFT: $$mdi:apple-keyboard-shift$$
+    RSHFT: $$mdi:apple-keyboard-shift$$
+    RCMD: $$mdi:apple-keyboard-command$$
+    RGUI: $$mdi:apple-keyboard-command$$       
+    # "Meh" key
+    LS(LC(LALT)): $$mdi:star-three-points$$
+
+    # Arrows
+    UP: $$mdi:arrow-up-bold$$
+    DOWN: $$mdi:arrow-down-bold$$
+    LEFT: $$mdi:arrow-left-bold$$
+    RIGHT: $$mdi:arrow-right-bold$$
+
+    # Whitespace
+    ENTER:
+      type: enter
+      tap: $$mdi:keyboard-return$$
+    RET:
+      type: enter
+      tap: $$mdi:keyboard-return$$
+    ESC: $$mdi:keyboard-esc$$
+    TAB: $$mdi:keyboard-tab$$
+    LS(TAB): $$mdi:keyboard-tab-reverse$$
+    SPACE: $$mdi:keyboard-space$$
+    BACKSPACE:
+      type: backspace
+      tap: $$mdi:backspace$$
+    BSPC:
+      type: backspace
+      tap: $$mdi:backspace$$
+    DELETE: $$mdi:backspace-reverse-outline$$
+    DEL: $$mdi:backspace-reverse-outline$$
+
+    # Locks
+    CAPSLOCK: $$mdi:apple-keyboard-caps$$
+    CAPS: $$mdi:apple-keyboard-caps$$
+
+    # Sound
+    C_MUTE: $$mdi:volume-off$$
+    C_VOL_UP: $$mdi:volume-high$$
+    C_VOL_DN: $$mdi:volume-low$$
+
+    # Media
+    C_NEXT: $$mdi:skip-next$$
+    C_PREV: $$mdi:skip-previous$$
+    C_PP: $$mdi:play-pause$$
+
+    # Bluetooth
+    BT_CLR: $$mdi:bluetooth-off$$
+    BT_SEL: $$mdi:bluetooth-connect$$
+
+    # Settings
+    C_BRI_UP: $$mdi:brightness-5$$
+    C_BRI_DN: $$mdi:brightness-7$$
+
+    # System
+    C_POWER: $$mdi:power-standby$$
+    C_AL_LOCK: $$mdi:lock$$
+    K_CANCEL: $$mdi:close-box$$
+
+
+#   zmk_combos:
+#     combo_to_2:
+#       align: top
+#     combo_to_3:
+#       align: top
+#     combo_bt_clear:
+#       align: top
+#       offset: 0.03
+#     combo_mute:
+#       align: top
+#       offset: 0.15
+#     combo_minus:
+#       key:
+#         shifted: "_"
+#         hold: "-"
+#     combo_equal:
+#       key:
+#         shifted: "+"
+#         hold: "="
+#     combo_backslash:
+#       key:
+#         shifted: "|"
+#         hold: \
+#     combo_lbkt:
+#       key:
+#         shifted: "{"
+#         hold: "["
+#     combo_rbkt:
+#       key:
+#         shifted: "}"
+#         hold: "]"
+#     combo_semicolon:
+#       key:
+#         shifted: ":"
+#         hold: ";"
