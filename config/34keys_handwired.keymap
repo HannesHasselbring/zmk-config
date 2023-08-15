@@ -20,11 +20,11 @@
     };
 
     combos {
-       #include "combos.dtsi"
+       #include "defaults/combos.dtsi"
     };
 
     macros {
-        #include "macros.dtsi"
+        #include "defaults/macros.dtsi"
     };
 
     keymap {
