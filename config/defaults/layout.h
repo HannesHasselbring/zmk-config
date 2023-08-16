@@ -13,11 +13,11 @@
 #define DEFAULT_LEFT_THUMB  &mt RGUI SQT    &lt 1 RET
 #define DEFAULT_RIGHT_THUMB &lt 2 SPACE  &mt RALT TAB
 
-#define LOWER_LEFT_R1       &kp EXCL   &kp AT      &kp HASH    &kp DLLR        &kp PRCNT
+#define LOWER_LEFT_R1       &kp EXCL    &kp AT      &kp HASH    &kp DLLR        &kp PRCNT
 #define LOWER_RIGHT_R1      &kp CARET   &kp AMPS    &kp ASTRK   &kp LPAR        &kp RPAR 
 #define LOWER_LEFT_R2       &kp UNDER   &kp PLUS    &kp LBRC    &kp RBRC        &kp PIPE
 #define LOWER_RIGHT_R2      &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT       &kp SEMI 
-#define LOWER_LEFT_R3       &kp ESC     &kp LGUI    &kp LALT    &caps_word      &kp DQT 
+#define LOWER_LEFT_R3       &kp ESC     &kp LGUI    &kp LALT    &kp TAB         &kp DQT 
 #define LOWER_RIGHT_R3      &kp HOME    &kp END     &kp PAGE_UP &kp PAGE_DOWN   &kp PSCRN
 #define LOWER_LEFT_THUMB    &trans      &trans 
 #define LOWER_RIGHT_THUMB   &mo 3       &trans
