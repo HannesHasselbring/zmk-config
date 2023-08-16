@@ -58,7 +58,7 @@ layers:
   - $$mdi:keyboard-esc$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
-  - $$mdi:alpha-w-box$$
+  - $$mdi:keyboard-tab$$
   - '"'
   - HOME
   - END
