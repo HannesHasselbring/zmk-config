@@ -17,7 +17,7 @@
 #define LOWER_RIGHT_R1      &kp CARET   &kp AMPS    &kp ASTRK   &kp LPAR        &kp RPAR 
 #define LOWER_LEFT_R2       &kp UNDER   &kp PLUS    &kp LBRC    &kp RBRC        &kp PIPE
 #define LOWER_RIGHT_R2      &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT       &kp SEMI 
-#define LOWER_LEFT_R3       &kp ESC     &kp LGUI    &kp LALT    &kp TAB         &kp DQT 
+#define LOWER_LEFT_R3       &kp ESC     &kp LCTRL   &kp LALT    &kp LGUI        &kp SINGLE_QUOTE 
 #define LOWER_RIGHT_R3      &kp HOME    &kp END     &kp PAGE_UP &kp PAGE_DOWN   &kp PSCRN
 #define LOWER_LEFT_THUMB    &trans      &trans 
 #define LOWER_RIGHT_THUMB   &mo 3       &trans
@@ -27,7 +27,7 @@
 #define RAISE_LEFT_R2       &kp MINUS       &kp EQUAL   &kp LBKT    &kp RBKT    &kp BSLH
 #define RAISE_RIGHT_R2      &kp LG(GRAVE)   &none       &kp GRAVE   &kp TILDE   &kp COLON
 #define RAISE_LEFT_R3       &kp ESC         &kp LCTRL   &kp LALT    &kp LGUI    &kp DOUBLE_QUOTES
-#define RAISE_RIGHT_R3      &kp TAB         &trans      &kp RCTRL   &kp RALT    &kp ENTER
+#define RAISE_RIGHT_R3      &kp TAB         &none      &kp RCTRL   &kp RALT    &kp ENTER
 #define RAISE_LEFT_THUMB    &trans  &mo 3 
 #define RAISE_RIGHT_THUMB   &trans  &trans
 
