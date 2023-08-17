@@ -86,20 +86,20 @@ layers:
   - {t: ']', s: '}'}
   - {t: \, s: '|'}
   - LG(GRAVE)
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '`', s: '~'}
   - '~'
   - ':'
   - $$mdi:keyboard-esc$$
-  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - CLCK
-  - DQ
+  - $$mdi:apple-keyboard-command$$
+  - '"'
   - $$mdi:keyboard-tab$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - adjust
   - {type: held}
@@ -125,16 +125,16 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F12
   - F11
+  - F12
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$tabler:screenshot$$
   - LG(TAB)
   - LG(GRAVE)
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:backup-restore$$
+  - {t: '$$mdi:progress-download$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {type: held}
