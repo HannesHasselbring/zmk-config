@@ -23,11 +23,11 @@
 #define LOWER_RIGHT_THUMB   &mo 3       &trans
 
 #define RAISE_LEFT_R1       &kp N1          &kp N2      &kp N3      &kp N4      &kp N5
-#define RAISE_RIGHT_R1      &kp N6          &kp N7      &kp N8      &kp N9      &kp N0 
-#define RAISE_LEFT_R2       &kp MINUS       &kp EQUAL   &kp LBKT    &kp RBKT    &kp BSLH 
-#define RAISE_RIGHT_R2      &kp LG(GRAVE)   &trans      &kp GRAVE   &kp TILDE   &kp COLON 
-#define RAISE_LEFT_R3       &kp ESC         &kp LGUI    &kp RALT    &kp CLCK    &kp DQ
-#define RAISE_RIGHT_R3      &kp TAB         &trans      &trans      &trans      &trans
+#define RAISE_RIGHT_R1      &kp N6          &kp N7      &kp N8      &kp N9      &kp N0
+#define RAISE_LEFT_R2       &kp MINUS       &kp EQUAL   &kp LBKT    &kp RBKT    &kp BSLH
+#define RAISE_RIGHT_R2      &kp LG(GRAVE)   &none       &kp GRAVE   &kp TILDE   &kp COLON
+#define RAISE_LEFT_R3       &kp ESC         &kp LCTRL   &kp LALT    &kp LGUI    &kp DOUBLE_QUOTES
+#define RAISE_RIGHT_R3      &kp TAB         &trans      &kp RCTRL   &kp RALT    &kp ENTER
 #define RAISE_LEFT_THUMB    &trans  &mo 3 
 #define RAISE_RIGHT_THUMB   &trans  &trans
 
@@ -35,7 +35,7 @@
 #define ADJUST_RIGHT_R1     &bt BT_SEL 0    &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4 
 #define ADJUST_LEFT_R2      &kp F6          &kp F7      &kp F8          &kp F9          &kp F10
 #define ADJUST_RIGHT_R2     &none           &none       &none           &none           &none
-#define ADJUST_LEFT_R3      &kp F12         &kp F11     &none           &none           &macro_screenshot 
-#define ADJUST_RIGHT_R3     &kp LG(TAB)     &kp LG(GRAVE) &none         &none           &sys_reset
+#define ADJUST_LEFT_R3      &kp F11         &kp F12     &none           &none           &macro_screenshot 
+#define ADJUST_RIGHT_R3     &kp LG(TAB)     &kp LG(GRAVE) &none         &sys_reset      &bootloader
 #define ADJUST_LEFT_THUMB   &trans  &trans
 #define ADJUST_RIGHT_THUMB  &trans  &trans
