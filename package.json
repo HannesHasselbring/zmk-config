@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@devcontainers/cli": "^0.73.0",
+    "prettier": "^3.5.0"
+  }
+}

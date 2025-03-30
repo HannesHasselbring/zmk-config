@@ -1,0 +1,35 @@
+[tools]
+node = "latest"
+
+
+[tasks.prepare]
+description = "prepare docker volume"
+run = 'docker volume create --driver local -o o=bind -o type=none -o device="$MISE_PROJECT_ROOT" zmk-config'
+
+[tasks.clean]
+description = "cleans docker volume"
+run = ['docker volume rm "zmk-config"']
+depends = ["down"]
+
+[tasks.clean-all]
+description = "cleans docker volume"
+run = ['echo todo: for i in $(docker volume list | grep "zmk-" | awk "{print $2}"); do echo docker volume rm $i; done  ']
+wait_for = ["down"]
+
+[tasks.install]
+run = 'npm ci'
+
+[tasks.up]
+run = 'npx devcontainer up --workspace-folder "../zmk" --id-label querylabel=zmk'
+depends = ["prepare"]
+
+[tasks.down]
+run = "./container-stop.sh || true"
+alias = "stop"
+
+[tasks.exec]
+description = "executes a bash in the zmk docker container NOTE: needs container id"
+run = './container-shell.sh'
+alias = "shell"
+
+# west build -p -b adafruit_kb2040 -S studio-rpc-usb-uart -- -DSHIELD=reviung41 -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n -DZMK_CONFIG=/workspaces/zmk-config/
