@@ -22,30 +22,28 @@
         // keymap accordingly!
         // zmk,matrix-transform = &single_2u_transform;
     };
-};
 
-behaviors {
-    ht: hold_tap {
-        label = "hold_tap";
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <220>;
-        quick-tap-ms = <150>;
-        global-quick-tap;
-        bindings = <&kp>, <&kp>;
+    behaviors {
+        ht: hold_tap {
+            label = "hold_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
     };
-};
 
-conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
-        if-layers = <1 2>;
-        then-layer = <3>;
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
     };
-};
 
-/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -65,6 +63,7 @@ conditional_layers {
                                             &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
+        };
 
         lower {
             display-name = "Lower";
@@ -123,10 +122,10 @@ conditional_layers {
         meta {
             display-name = "Meta";
             bindings = <
-&rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &rgb_ug RGB_EFF &none        &none        &none        &none        &none
-&rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_EFR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-&none           &none           &rgb_ug RGB_TOG &none           &none           &none        &none        &bt BT_CLR   &none        &none
-                                &none           &trans          &trans          &none
+            &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &rgb_ug RGB_EFF &none        &none        &none        &none        &none
+            &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_EFR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+            &none           &none           &rgb_ug RGB_TOG &none           &none           &none        &none        &bt BT_CLR   &none        &none
+                                            &none           &trans          &trans          &none
             >;
         };
     };
