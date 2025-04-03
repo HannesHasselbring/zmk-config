@@ -13,7 +13,7 @@ depends = ["down"]
 
 [tasks.clean-all]
 description = "cleans docker volume"
-run = ['echo todo: for i in $(docker volume list | grep "zmk-" | awk "{print $2}"); do echo docker volume rm $i; done  ']
+run = ['for i in $(docker volume list | grep "zmk-" | awk "{print $2}"); do echo docker volume rm $i; done']
 wait_for = ["down"]
 
 [tasks.install]
